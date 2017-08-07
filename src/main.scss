@@ -1,0 +1,47 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$grid-width: 1200px;
+$column: 12;
+$gutter: 10px;
+
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 480px;
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin loop($type) {
+  @for $i from 1 through $column {
+    .#{$type}-#{$i} {
+      flex-basis: percentage(($i/$column));
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  max-width: $grid-width;
+  margin: 0 auto;
+}
+
+@include loop(xs);
+@include loop(sm);
+@include loop(md);
+@include loop(lg);
+
+@media (min-width: $screen-xs) {
+  @include loop(xs);
+}
+@media (min-width: $screen-sm) {
+  @include loop(sm);
+}
+@media (min-width: $screen-md) {
+  @include loop(md);
+}
+@media (min-width: $screen-lg) {
+  @include loop(lg);
+}
