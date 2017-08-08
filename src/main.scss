@@ -2,7 +2,8 @@ $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 $grid-width: 1200px;
 $column: 12;
-$gutter: 10px;
+$gutter: 6px;
+$halfgutter: $gutter/2;
 $screen-lg: 1200px;
 $screen-md: 992px;
 $screen-sm: 768px;
@@ -12,11 +13,10 @@ $screen-xs: 480px;
   box-sizing: border-box;
 }
 
-
 @mixin looplg($type) {
   @for $i from 1 through $column {
     @if $type == lg and $i == $column {
-      .grid {
+      .row {
         display: flex;
         flex-wrap: wrap;
         .lg-#{$i} {
@@ -24,51 +24,54 @@ $screen-xs: 480px;
         }
       }
     } @else {
-      .grid {
+      .row {
         display: flex;
         flex-wrap: nowrap;
         .#{$type}-#{$i} {
-          flex-basis: percentage(($i/$column));
+          $a: percentage(($i/$column));
+          flex-basis: calc(#{$a} - #{$gutter});
         }
       }
     }
   }
 }
 
-
 @mixin loop($type) {
   @for $i from 1 through $column {
-    .grid {
+    .row {
       display: flex;
       flex-wrap: nowrap;
       .#{$type}-#{$i} {
-        flex-basis: percentage(($i/$column));
+        $a: percentage(($i/$column));
+        flex-basis: calc(#{$a} - #{$gutter});
       }
     }
   }
 }
-
-.grid {
+.row {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   max-width: $grid-width;
-  margin: 0 auto;
+  margin: 5px auto;
+  div {
+    margin-left: $halfgutter;
+    margin-right: $halfgutter;
+  }
 }
-
-
 @for $i from 1 through $column {
-  .grid {
-    display: block;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
     .sm-#{$i}, .md-#{$i}, .lg-#{$i} {
-      width: 100%;
+      flex-basis: 100%;
     }
   }
 }
 
 @media (max-width: $screen-xs) {
   @for $i from 1 through $column {
-    .grid {
+    .row {
       display: block;
       .xs-#{$i} {
         width: 100%;
@@ -76,7 +79,6 @@ $screen-xs: 480px;
     }
   }
 }
-
 @media (min-width: $screen-xs) {
   @include loop(sm);
 }
