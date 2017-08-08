@@ -13,10 +13,24 @@ $screen-xs: 480px;
   box-sizing: border-box;
 }
 
+
+
 @mixin loop($type) {
   @for $i from 1 through $column {
-    .#{$type}-#{$i} {
-      flex-basis: percentage(($i/$column));
+    @if $i == $column {
+      .grid {
+        display: flex;
+        .#{$type}-#{$i} {
+          flex-basis: percentage(($i/$column));
+        }
+      }
+    } @else {
+      .grid {
+        display: flex;
+        .#{$type}-#{$i} {
+          flex-basis: percentage(($i/$column));
+        }
+      }
     }
   }
 }
@@ -26,65 +40,41 @@ $screen-xs: 480px;
   flex-direction: row;
   max-width: $grid-width;
   margin: 0 auto;
-  /*flex-wrap: wrap;*/
 }
 
 
-@include loop(sm);
-@include loop(md);
-@include loop(lg);
+@for $i from 1 through $column {
+  .grid {
+    display: block;
+    .sm-#{$i}, .md-#{$i}, .lg-#{$i} {
+      width: 100%;
+    }
+  }
+}
 
 @media (max-width: $screen-xs) {
   @for $i from 1 through $column {
     .grid {
       display: block;
       .xs-#{$i} {
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
       }
     }
   }
 }
-/*
-@media (min-width: $screen-xs) {
-  @include loop(sm);
-}
-@media (max-width: $screen-sm) {
-  @include loop(sm);
-}
-@media (min-width: $screen-md) {
-  @include loop(md);
-}
-@media (max-width: $screen-lg) {
-  @include loop(md);
-}
-@media (min-width: $screen-lg) {
-  @include loop(lg);
-}
-*/
-
 
 @media (min-width: $screen-xs) {
   @include loop(sm);
 }
 
-@media (max-width: $screen-sm) {
-  @include loop(sm);
-}
 @media (min-width: $screen-sm) {
   @include loop(md);
 }
 
-@media (max-width: $screen-md) {
-  @include loop(md);
-}
 @media (min-width: $screen-md) {
   @include loop(lg);
 }
 
-@media (max-width: $screen-lg) {
-  @include loop(lg);
-}
 @media (min-width: $screen-lg) {
   @include loop(lg);
 }
