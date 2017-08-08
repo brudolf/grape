@@ -3,7 +3,6 @@ $primary-color: #333;
 $grid-width: 1200px;
 $column: 12;
 $gutter: 10px;
-
 $screen-lg: 1200px;
 $screen-md: 992px;
 $screen-sm: 768px;
@@ -14,19 +13,20 @@ $screen-xs: 480px;
 }
 
 
-
-@mixin loop($type) {
+@mixin looplg($type) {
   @for $i from 1 through $column {
-    @if $i == $column {
+    @if $type == lg and $i == $column {
       .grid {
         display: flex;
-        .#{$type}-#{$i} {
-          flex-basis: percentage(($i/$column));
+        flex-wrap: wrap;
+        .lg-#{$i} {
+          flex-basis: 100%;
         }
       }
     } @else {
       .grid {
         display: flex;
+        flex-wrap: nowrap;
         .#{$type}-#{$i} {
           flex-basis: percentage(($i/$column));
         }
@@ -35,8 +35,22 @@ $screen-xs: 480px;
   }
 }
 
+
+@mixin loop($type) {
+  @for $i from 1 through $column {
+    .grid {
+      display: flex;
+      flex-wrap: nowrap;
+      .#{$type}-#{$i} {
+        flex-basis: percentage(($i/$column));
+      }
+    }
+  }
+}
+
 .grid {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   max-width: $grid-width;
   margin: 0 auto;
@@ -66,15 +80,12 @@ $screen-xs: 480px;
 @media (min-width: $screen-xs) {
   @include loop(sm);
 }
-
 @media (min-width: $screen-sm) {
   @include loop(md);
 }
-
 @media (min-width: $screen-md) {
-  @include loop(lg);
+  @include looplg(lg);
 }
-
 @media (min-width: $screen-lg) {
-  @include loop(lg);
+  @include looplg(lg);
 }

@@ -4,6 +4,7 @@
 
 .grid {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   max-width: 1200px;
   margin: 0 auto;
@@ -181,6 +182,7 @@
 @media (min-width: 480px) {
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-1 {
     flex-basis: 8.33333%;
@@ -188,6 +190,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-2 {
     flex-basis: 16.66667%;
@@ -195,6 +198,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-3 {
     flex-basis: 25%;
@@ -202,6 +206,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-4 {
     flex-basis: 33.33333%;
@@ -209,6 +214,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-5 {
     flex-basis: 41.66667%;
@@ -216,6 +222,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-6 {
     flex-basis: 50%;
@@ -223,6 +230,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-7 {
     flex-basis: 58.33333%;
@@ -230,6 +238,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-8 {
     flex-basis: 66.66667%;
@@ -237,6 +246,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-9 {
     flex-basis: 75%;
@@ -244,6 +254,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-10 {
     flex-basis: 83.33333%;
@@ -251,6 +262,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-11 {
     flex-basis: 91.66667%;
@@ -258,6 +270,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .sm-12 {
     flex-basis: 100%;
@@ -266,6 +279,7 @@
 @media (min-width: 768px) {
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-1 {
     flex-basis: 8.33333%;
@@ -273,6 +287,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-2 {
     flex-basis: 16.66667%;
@@ -280,6 +295,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-3 {
     flex-basis: 25%;
@@ -287,6 +303,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-4 {
     flex-basis: 33.33333%;
@@ -294,6 +311,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-5 {
     flex-basis: 41.66667%;
@@ -301,6 +319,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-6 {
     flex-basis: 50%;
@@ -308,6 +327,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-7 {
     flex-basis: 58.33333%;
@@ -315,6 +335,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-8 {
     flex-basis: 66.66667%;
@@ -322,6 +343,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-9 {
     flex-basis: 75%;
@@ -329,6 +351,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-10 {
     flex-basis: 83.33333%;
@@ -336,6 +359,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-11 {
     flex-basis: 91.66667%;
@@ -343,6 +367,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .md-12 {
     flex-basis: 100%;
@@ -351,6 +376,7 @@
 @media (min-width: 992px) {
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-1 {
     flex-basis: 8.33333%;
@@ -358,6 +384,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-2 {
     flex-basis: 16.66667%;
@@ -365,6 +392,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-3 {
     flex-basis: 25%;
@@ -372,6 +400,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-4 {
     flex-basis: 33.33333%;
@@ -379,6 +408,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-5 {
     flex-basis: 41.66667%;
@@ -386,6 +416,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-6 {
     flex-basis: 50%;
@@ -393,6 +424,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-7 {
     flex-basis: 58.33333%;
@@ -400,6 +432,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-8 {
     flex-basis: 66.66667%;
@@ -407,6 +440,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-9 {
     flex-basis: 75%;
@@ -414,6 +448,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-10 {
     flex-basis: 83.33333%;
@@ -421,6 +456,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-11 {
     flex-basis: 91.66667%;
@@ -428,6 +464,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: wrap;
   }
   .grid .lg-12 {
     flex-basis: 100%;
@@ -436,6 +473,7 @@
 @media (min-width: 1200px) {
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-1 {
     flex-basis: 8.33333%;
@@ -443,6 +481,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-2 {
     flex-basis: 16.66667%;
@@ -450,6 +489,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-3 {
     flex-basis: 25%;
@@ -457,6 +497,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-4 {
     flex-basis: 33.33333%;
@@ -464,6 +505,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-5 {
     flex-basis: 41.66667%;
@@ -471,6 +513,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-6 {
     flex-basis: 50%;
@@ -478,6 +521,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-7 {
     flex-basis: 58.33333%;
@@ -485,6 +529,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-8 {
     flex-basis: 66.66667%;
@@ -492,6 +537,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-9 {
     flex-basis: 75%;
@@ -499,6 +545,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-10 {
     flex-basis: 83.33333%;
@@ -506,6 +553,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: nowrap;
   }
   .grid .lg-11 {
     flex-basis: 91.66667%;
@@ -513,6 +561,7 @@
 
   .grid {
     display: flex;
+    flex-wrap: wrap;
   }
   .grid .lg-12 {
     flex-basis: 100%;
